@@ -9,7 +9,10 @@ btnCreate.onclick = function() {
         elem = document.createElement('p');
         elem.textContent = "Новый абзац...";
         elem.classList.add('elem');
-
+        if(i == 0){
+          elem.style.backgroundColor = "darkred";
+          elem.style.color = "white";
+        }
         newElements.append(elem);
     }
 }
