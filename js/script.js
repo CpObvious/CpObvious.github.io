@@ -1,14 +1,15 @@
-let number = +prompt("Введите целое число");
+let btnCreate = document.querySelector('.btn-create');
+let newElements = document.querySelector('.new-elements');
+let elem;
+let numberElements = document.querySelector('.number-elements');
 
-function checkNumberDivide(num) {
-  let flag = false;
-  
-    for(let i = 2; i < num; i++) {
-        if(num % i == 0) {
-            flag = true;
-        } 
+
+btnCreate.onclick = function() {
+    for(let i = 0; i < +numberElements.value; i++) {
+        elem = document.createElement('p');
+        elem.textContent = "Новый абзац...";
+        elem.classList.add('elem');
+
+        newElements.append(elem);
     }
-  return flag;
 }
-
-alert(checkNumberDivide(number));

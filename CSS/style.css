@@ -1,3 +1,48 @@
-body  {
-    background-color: grey;
+.btn {
+    padding: 10px 15px;
+
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 3px rgb(3, 94, 136);
+
+    color: #fff;
+    text-transform: uppercase;
+    
+
+    transition: all 0.25s;
+}
+
+.btn-create {
+    background-color: rgb(60, 165, 214);
+}
+
+.btn-remove {
+    margin-left: 25px;
+    background-color: rgb(141, 31, 31);
+}
+
+.btn:hover {
+    cursor: pointer;
+    filter: saturate(170%);
+}
+
+.number-elements {
+    margin-left: 10px;
+    border: 1px solid gold;
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+.new-elements {
+    min-height: 25vh;
+    margin-top: 25px;
+
+    background-color: lightgreen;
+}
+
+.elem {
+    padding: 10px;
+    font-size: 20px;
+    border: 2px dashed gold;
 }
