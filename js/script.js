@@ -17,8 +17,9 @@ btnCreate.onclick = function() {
         newElements.append(elem);
     }
 }
-btnremove.onclick = function() {
-  for(let elem of newElements.childNodes) {
-    newElements.removeChild(elem);
+btnRemove.onclick = function() {
+  let children = newElements.childNodes;
+  for (let i=children.length - 1; i > -1; i--) {
+    newElements.removeChild(children[i]);
   }
 }
