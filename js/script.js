@@ -1,6 +1,10 @@
 let numberElements = document.querySelector('.number-elements');
 let textContainer = document.querySelector('.text-container');
 let chkImage = document.querySelector('.chk-image');
+let imgSettings = document.querySelector('.img-settings');
+let imgTypes = imgSettings.querySelectorAll('[name="img-type"]');
+let imgClass;
+
 let rangeText = document.querySelector('.size-text');
 let sizeText = document.querySelector('.size');
 
@@ -10,6 +14,10 @@ let btnCreate = document.querySelector('.btn-create');
 let btnRemove = document.querySelector('.btn-remove');
 
 let elem;
+
+chkImage.onchange = function() {
+    imgSettings.classList.toggle('img-settings__hidden');
+}
 
 rangeText.oninput = function() {
     let fontSize = rangeText.value;
@@ -38,6 +46,9 @@ btnCreate.onclick = function() {
             image.title = 'Это картинка';
             image.classList.add('photo');
 
+            imgClass = getImgType(imgTypes);
+            image.classList.add(imgClass);
+
             elem.appendChild(image);
         }
     }
@@ -45,8 +56,25 @@ btnCreate.onclick = function() {
 
 btnRemove.onclick = function() {
     let children = newElements.childNodes;
-    
+
     for(let i = children.length - 1; i > -1; i--) {
         newElements.removeChild(children[i]);
+    }
+}
+
+function getImgType(imgTypes) {
+    imgClass = "";
+    
+    if(imgTypes[0].checked) {
+        return imgClass = "photo-circle";
+    }
+    else if(imgTypes[1].checked) {
+        return imgClass = "photo-border";
+    }
+    else if(imgTypes[2].checked) {
+        return imgClass = "photo-angle";
+    }
+    else {
+        return imgClass;
     }
 }
