@@ -93,3 +93,21 @@
     margin: 10px 0;
     background-color: rgb(141, 31, 31);
 }
+.new-elements {
+    min-height: 25vh;
+    margin-top: 25px;
+
+    background-color: lightgreen;
+}
+
+.new-elements .elem {
+    padding: 10px;
+    font-size: 20px;
+    border: 2px dashed gold;
+}
+
+.new-elements .photo {
+    display: block;
+    width: 50%;
+    margin: auto;
+}

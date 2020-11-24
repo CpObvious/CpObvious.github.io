@@ -1,25 +1,35 @@
 let btnCreate = document.querySelector('.btn-create');
-let btnremove = document.querySelector('.btn-remove');
+let btnRemove = document.querySelector('.btn-remove');
 let newElements = document.querySelector('.new-elements');
-let elem;
 let numberElements = document.querySelector('.number-elements');
+let textContainer = document.querySelector('.text-container');
+let chkImage = document.querySelector('.chk-image');
+let elem;
 
-
-btnCreate.onclick = function() {
+btnCreate.onclick = function () {
     for(let i = 0; i < +numberElements.value; i++) {
+
         elem = document.createElement('p');
-        elem.textContent = "Новый абзац...";
+        elem.textContent = textContainer.value;
         elem.classList.add('elem');
-        if(i == 0){
-          elem.style.backgroundColor = "darkred";
-          elem.style.color = "white";
+
+        newElements.appendChild(elem);
+
+        if(chkImage.checked) {
+            let image = document.createElement('img');
+            image.src = 'img/photo.jpg';
+            image.alt = 'Изображение в абзаце';
+            image.classList.add('photo');
+
+            elem.appendChild(image);
         }
-        newElements.append(elem);
     }
 }
+
+let children = newElements.childNodes;
+
 btnRemove.onclick = function() {
-  let children = newElements.childNodes;
-  for (let i=children.length - 1; i > -1; i--) {
-    newElements.removeChild(children[i]);
-  }
+    for(let i = children.length - 1; i > -1; i--) {
+        newElements.removeChild(children[i]);
+    }
 }
