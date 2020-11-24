@@ -8,17 +8,7 @@
     color: #fff;
     text-transform: uppercase;
     
-
     transition: all 0.25s;
-}
-
-.btn-create {
-    background-color: rgb(60, 165, 214);
-}
-
-.btn-remove {
-    margin-left: 25px;
-    background-color: rgb(141, 31, 31);
 }
 
 .btn:hover {
@@ -26,7 +16,47 @@
     filter: saturate(170%);
 }
 
-.number-elements {
+.form {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    max-width: 600px;
+    padding: 15px;
+}
+
+.form .row-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form .group-form {
+    border: 2px solid rgb(187, 13, 13);
+    background-color: rgb(251, 252, 245);
+}
+
+.form .group-form__create {
+    margin-bottom: 15px;
+}
+
+.form .group-title {
+    text-transform: uppercase;
+    font-family: "Verdana", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 10px;
+    color: rgb(112, 74, 250);
+}
+
+.form label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Tahoma", sans-serif;
+    color: rgb(5, 126, 65);
+}
+
+.form .number-elements {
     margin-left: 10px;
     border: 1px solid gold;
     border-radius: 5px;
@@ -34,49 +64,6 @@
     text-align: center;
 }
 
-.new-elements {
-    min-height: 25vh;
-    margin-top: 25px;
-
-    background-color: lightgreen;
-}
-
-.elem {
-    padding: 10px;
-    font-size: 20px;
-    border: 2px dashed gold;
-}
-.row-form{
-    line-height: 150%;
-}
-.form{
-    min-width: 400px;
-    max-width: 600px;
-    padding: 15px;
-
-}
-.group-form{
-    border: 2px solid rgb(211, 14, 14);
-    background-color: rgb(253, 189, 13);
-}
-.group-form__create {
-    margin-bottom: 15px;
-}
-.group-title{
-    text-transform: uppercase;
-    font-family: "Verdana", sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 0 10px;
-    color: rgb(50, 6, 173)
-}
-.form-label{
-    text-transform: uppercase;
-    font-family: "Tahoma", sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    color: rgb(18, 194, 106)
-}
 .form .text-container {
     display: block;
     width: 75%;
@@ -87,12 +74,36 @@
 .form .btn-create {
     background-color: rgb(60, 165, 214);
     margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+.form .label-size {
+    color: blue;
+    margin-right: 15px;
+}
+
+.form .size-change {
+    color: rgb(167, 6, 216);
+}
+
+.form .size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    background-color: rgb(208, 232, 252);
+    width: 40px;
+    height: 25px;
+    border: 1px solid lightblue;
+    font-weight: bold;
+    color: blue
 }
 
 .form .btn-remove {
     margin: 10px 0;
     background-color: rgb(141, 31, 31);
 }
+
 .new-elements {
     min-height: 25vh;
     margin-top: 25px;
@@ -102,7 +113,7 @@
 
 .new-elements .elem {
     padding: 10px;
-    font-size: 20px;
+    /* font-size: 20px; */
     border: 2px dashed gold;
 }
 

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,7 +10,7 @@
 </head>
 <body>
     
-    <h1>Знакомство с методами DOM</h1>
+    <h1>Знакомство с методами DOM!</h1>
 
     <form action="#" class="form">
         <fieldset class="group-form group-form__create">
@@ -22,7 +23,7 @@
 
             <div class="row-form">
                 <label for="text">Текст элемента:</label>
-                <textarea class="text-container" id="text"></textarea>
+                <textarea class="text-container" id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, ea! Recusandae numquam adipisci, fugit minima eaque voluptate sequi molestiae ipsa consequuntur commodi, iste dolorum similique veniam. Harum consequuntur modi recusandae.</textarea>
             </div>
 
             <div class="row-form">
@@ -31,6 +32,15 @@
             </div>
 
             <button class="btn btn-create">Создать элементы</button>
+
+            <div class="row-form">
+                <label class="label-size" for="size-text">Изменить размер текста:</label>
+                <span class="size-change">8px</span>
+                <input class="size-text" id="size-text" type="range" min="8" max="30" value="14">
+                <span class="size-change">30px</span>
+                <output class="size"></output>
+            </div>
+
         </fieldset>
         
         <fieldset class="group-form group-form__remove">
@@ -42,5 +52,6 @@
     <div class="new-elements"></div>
 
     <script src="js/script.js"></script>
+
 </body>
 </html>
