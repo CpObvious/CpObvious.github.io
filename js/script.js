@@ -32,23 +32,13 @@ rangeText.oninput = function() {
 
 btnCreate.onclick = function() {
     for(let i = 0; i < +numberElements.value; i++) {
-        elem = document.createElement('p');
-        elem.textContent = textContainer.value;
-        elem.classList.add('elem');
-        elem.style.fontSize = sizeText.textContent + 'px';
-
+        elem = createElem();
         newElements.appendChild(elem);
+        
+        imgClass = getImgType(imgTypes);
 
         if(chkImage.checked) {
-            let image = document.createElement('img');
-            image.src = 'img/photo.jpg';
-            image.alt = 'Изображение в абзаце';
-            image.title = 'Это картинка';
-            image.classList.add('photo');
-
-            imgClass = getImgType(imgTypes);
-            image.classList.add(imgClass);
-
+            let image = createImg();
             elem.appendChild(image);
         }
     }
@@ -63,8 +53,6 @@ btnRemove.onclick = function() {
 }
 
 function getImgType(imgTypes) {
-    imgClass = "";
-    
     if(imgTypes[0].checked) {
         return imgClass = "photo-circle";
     }
@@ -74,7 +62,25 @@ function getImgType(imgTypes) {
     else if(imgTypes[2].checked) {
         return imgClass = "photo-angle";
     }
-    else {
-        return imgClass;
-    }
+}
+
+function createElem() {
+    elem = document.createElement('p');
+    elem.textContent = textContainer.value;
+    elem.classList.add('elem');
+    elem.style.fontSize = sizeText.textContent + 'px';
+
+    return elem;
+}
+
+function createImg() {
+    let image = document.createElement('img');
+
+    image.src = 'img/ak.png';
+    image.alt = 'Изображение в абзаце';
+    image.title = 'Это картинка';
+    image.classList.add('photo');
+    image.classList.add(imgClass);
+    
+    return image;
 }
