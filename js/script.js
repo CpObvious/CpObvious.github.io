@@ -40,7 +40,7 @@ function getImgType(imgTypes) {
 function createImg() {
     let image = document.createElement('img');
 
-    image.src = 'img/photo.jpg';
+    image.src = 'img/ak.png';
     image.alt = 'Изображение в абзаце';
     image.title = 'Это картинка';
     image.classList.add('photo');
