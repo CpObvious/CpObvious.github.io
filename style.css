@@ -139,7 +139,7 @@
 .photo-circle {
     border-radius: 50%;
     box-shadow: 0 0 20px gold;
-}
+    }
 
 .photo-border {
     border: 20px groove rgb(219, 198, 7);
