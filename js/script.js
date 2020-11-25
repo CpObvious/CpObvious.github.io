@@ -14,7 +14,7 @@ let newElements = document.querySelector('.new-elements');
 let btnCreate = document.querySelector('.btn-create');
 let btnRemove = document.querySelector('.btn-remove');
 
-let elem, imgClass, children;;
+let elem, imgClass, children;
 
 function createElem() {
     elem = document.createElement('p');
